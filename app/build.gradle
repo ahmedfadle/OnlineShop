@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.gmsproduction.onlineshop"
+        minSdkVersion 18
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+
+
+
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('libs/universal-image-loader-1.9.5.jar')
+
+/*    compile('com.mikepenz:materialdrawer:5.9.5@aar') {
+        transitive = true
+    }*/
+
+    compile('com.mikepenz:materialdrawer:5.2.0@aar') {
+        transitive = true
+    }
+
+
+
+
+
+
+    compile('com.mikepenz:aboutlibraries:5.6.7@aar') {
+        transitive = true
+    }
+    compile('com.mikepenz:materialdrawer:5.2.8@aar') {
+        transitive = true
+    }
+
+    //SUB-DEPENDENCIES
+    //Android-Iconics - used to provide an easy API for icons
+    
+
+    //appcompat
+
+
+
+
+
+
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.0.0'
+    compile 'com.android.support:cardview-v7:25.0.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
+    compile 'com.daimajia.swipelayout:library:1.2.0@aar'
+    compile 'com.romandanylyk:pageindicatorview:0.1.1'
+    compile 'com.cleveroad:splittransformation:0.9.0'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.hendiware.utils:futils:1.6.91'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.mikepenz:crossfader:1.5.0@aar'
+    compile 'com.mikepenz:itemanimators:0.5.0@aar'
+    compile 'com.mikepenz:crossfadedrawerlayout:1.0.0@aar'
+    compile 'com.mikepenz:google-material-typeface:2.2.0.1@aar'
+    compile 'com.mikepenz:fontawesome-typeface:4.6.0.3@aar'
+    compile 'com.mikepenz:octicons-typeface:3.0.0.1@aar'
+    compile 'com.github.xiprox.errorview:library:1.0.0'
+    compile 'com.google.android.apps.muzei:muzei-api:+'
+    compile 'com.mikepenz:iconics-core:2.8.1@aar'
+    compile 'com.mikepenz:actionitembadge:3.3.1@aar'
+    compile 'com.github.pwittchen:reactivenetwork-rx2:0.11.0'
+    compile 'com.daimajia.easing:library:2.0@aar'
+    compile 'com.daimajia.androidanimations:library:2.3@aar'
+
+    compile 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.0'
+
+    testCompile 'junit:junit:4.12'
+}
+apply plugin: 'realm-android'

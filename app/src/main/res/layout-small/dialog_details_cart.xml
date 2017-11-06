@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="هذا المنتج مضاف سابقا هل تريد اضافة تعديل"
+        android:textSize="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#000"
+        android:layout_gravity="center"
+        android:id="@+id/tv_dialog_checker"
+        android:visibility="gone"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ادخل الكميه التى تريدها"
+        android:textSize="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        />
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/minus"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/ivMinus"
+
+
+                    />
+                <EditText
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/etItemNo"
+                    android:layout_gravity="center"
+                    android:inputType="number"
+                    android:text="1"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/plus"
+                    android:layout_gravity="center"
+                    android:id="@+id/ivPlus"
+
+
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="اختر الالوان التى تريدها"
+                android:textSize="8dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_dialog_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/pad_5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"></android.support.v7.widget.RecyclerView>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/et_order_desc_dialog"
+                android:hint="Add your notes"
+                android:layout_margin="@dimen/pad_5dp"
+                android:textSize="8dp"
+                android:gravity="top|left"
+                android:background="#fff3ea"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Confirm"
+                android:textSize="8dp"
+                android:background="@color/colorPrimaryDark"
+                android:layout_gravity="bottom"
+                android:id="@+id/btnConfirm"
+                android:textColor="@color/colorWhite"
+                />
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>
